@@ -6,8 +6,8 @@ import {COLOURS, STYLES} from '../assets/constants';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 
 const TabCategories = [
-  {name: 'todaysBest', value: "Today's Best", iconName: 'award'},
-  {name: 'myFeed', value: 'My Feed', iconName: 'eye'},
+  {key: '1', name: 'todaysBest', value: "Today's Best", iconName: 'award'},
+  {key: '2', name: 'myFeed', value: 'My Feed', iconName: 'eye'},
 ];
 
 function RadioButton({data, onSelect}) {
@@ -25,18 +25,17 @@ function RadioButton({data, onSelect}) {
           alignItems: 'center',
           marginBottom: 8,
         }}>
-        {data.map(item => {
+        {data.map((item, key) => {
           return (
-            <>
-              <Pressable
-                style={
-                  item.name === userOption ? styles.selected : styles.unselected
-                }
-                onPress={() => selectHandler(item.name)}>
-                <FeatherIcon name={item.iconName} size={18} />
-                <Text style={styles.option}> {item.value}</Text>
-              </Pressable>
-            </>
+            <Pressable
+              key={key}
+              style={
+                item.name === userOption ? styles.selected : styles.unselected
+              }
+              onPress={() => selectHandler(item.name)}>
+              <FeatherIcon name={item.iconName} size={18} color="black" />
+              <Text style={styles.option}> {item.value}</Text>
+            </Pressable>
           );
         })}
       </View>

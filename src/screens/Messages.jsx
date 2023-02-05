@@ -1,7 +1,7 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const EasyBuySell = () => {
+const Messages = () => {
   return (
     <View>
       <Text>EasyBuySell</Text>
@@ -9,4 +9,4 @@ const EasyBuySell = () => {
   );
 };
 
-export default EasyBuySell;
+export default Messages;

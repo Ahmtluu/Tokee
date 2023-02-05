@@ -37,8 +37,8 @@ const TokenItem = ({title, mount}) => {
       </View>
       <View
         style={{
-          paddingLeft: 8,
-          paddingTop: 8,
+          paddingLeft: 12,
+          paddingTop: 12,
         }}>
         <Text style={STYLES.headerText}>{title}</Text>
         <Text>{mount}</Text>
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     width: 135,
     height: 125,
     borderRadius: 10,
-    paddingTop: 8,
+    paddingTop: 12,
     marginBottom: 8,
     marginRight: 8,
     marginLeft: 2,
